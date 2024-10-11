@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Creator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Create Your Comic</h1>
+            <nav>
+                <button id="back-to-dashboard">Back to Dashboard</button>
+                <button id="logout-btn">Logout</button>
+            </nav>
+        </header>
+        <form id="comic-form">
+            <input type="text" id="comic-title" placeholder="Comic Title (optional)">
+            <textarea id="prompt" placeholder="Enter your comic prompt here..."></textarea>
+            <button type="submit">Generate Comic</button>
+        </form>
+        <div id="comic-tiles" class="horizontal-scroll"></div>
+        <button id="save-comic">Save Comic</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="{{ url_for('static', filename='js/comic-creator.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="animation.js"></script>
+
+    
+</body>
+</html>
